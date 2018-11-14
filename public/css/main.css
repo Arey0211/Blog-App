@@ -1,0 +1,9 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+
+.container.main {
+  margin-top: 7em;
+  background-color: #000;
+}

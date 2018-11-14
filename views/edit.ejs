@@ -1,0 +1,22 @@
+<% include partials/header %>
+
+<div class="ui main text container segment">
+  <div class="ui huge inverted header">Edit <%= post.title %></div>
+  <form action="/blogs/<%= post._id %>?_method=PUT" method="POST" class="ui form focus">
+    <div class="field">
+      <label>Title</label>
+      <input type="text" name="blog[title]" value=" <%= post.title %> " required>
+    </div>
+    <div class="field">
+      <label>Image</label>
+      <input type="text" name="blog[image]" value=" <%= post.image %> " required>
+    </div>
+    <div class="field">
+      <label>Blog Content</label>
+      <textarea name="blog[body]"> <%= post.body %> </textarea>
+    </div>
+    <input class="ui inverted primary button huge" type="submit">
+  </form>
+</div>
+
+<% include partials/footer %>
